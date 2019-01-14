@@ -4,7 +4,17 @@
 
     <sitemap>
         <loc>http://qweqwe9ab.github.io/post-sitemap.xml</loc>
-        <lastmod>2019-01-13T06:52:32.656Z</lastmod>
+        <lastmod>2019-01-14T09:39:56.050Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>http://qweqwe9ab.github.io/category-sitemap.xml</loc>
+        
+    </sitemap>
+
+    <sitemap>
+        <loc>http://qweqwe9ab.github.io/tag-sitemap.xml</loc>
+        
     </sitemap>
 
 </sitemapindex>
