@@ -3,50 +3,50 @@
 
 
     <url>
-        <loc>http://qweqwe9ab.github.io/tags/dev/</loc>
-        <lastmod>2019-01-14T09:49:29.508Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://qweqwe9ab.github.io/tags/javascript/</loc>
-        <lastmod>2019-01-14T09:49:29.508Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://qweqwe9ab.github.io/tags/jstips/</loc>
-        <lastmod>2019-01-14T09:49:29.508Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://qweqwe9ab.github.io/tags/etc/</loc>
-        <lastmod>2019-01-14T09:50:05.753Z</lastmod>
+        <lastmod>2019-01-14T10:34:18.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://qweqwe9ab.github.io/tags/plan/</loc>
-        <lastmod>2019-01-14T09:50:05.753Z</lastmod>
+        <lastmod>2019-01-14T10:34:18.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://qweqwe9ab.github.io/tags/2019/</loc>
-        <lastmod>2019-01-14T09:50:05.753Z</lastmod>
+        <lastmod>2019-01-14T10:34:18.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://qweqwe9ab.github.io/tags/%EA%B3%84%ED%9A%8D/</loc>
-        <lastmod>2019-01-14T09:50:05.753Z</lastmod>
+        <lastmod>2019-01-14T10:34:18.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://qweqwe9ab.github.io/tags/dev/</loc>
+        <lastmod>2019-01-14T10:36:48.601Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://qweqwe9ab.github.io/tags/javascript/</loc>
+        <lastmod>2019-01-14T10:36:48.601Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://qweqwe9ab.github.io/tags/jstips/</loc>
+        <lastmod>2019-01-14T10:36:48.601Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

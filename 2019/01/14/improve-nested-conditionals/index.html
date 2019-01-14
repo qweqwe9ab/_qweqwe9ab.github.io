@@ -6,25 +6,25 @@
     
 
     
-    <title>improve-nested-conditionals | 밤에 하는 개발.</title>
+    <title>[jstips] 중첩된 조건문 개선 if, switch | 밤에 하는 개발.</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="dev,javascript,jstips">
     
-    <meta name="description" content="Related Posts 중첩된 조건문 개선 jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하고 효율적으로 만들 수 있을지에 대해서 읽었습니다. 1234567891011121314if (color) &amp;#123;  if (color === &apos;black&apos;) &amp;#123;    printBlackBackground();  &amp;#125;">
+    <meta name="description" content="중첩된 조건문 개선 jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하고 효율적으로 만들 수 있을지에 대해서 읽었습니다. 1234567891011121314if (color) &amp;#123;  if (color === &apos;black&apos;) &amp;#123;    printBlackBackground();  &amp;#125; else if (col">
 <meta name="keywords" content="dev,javascript,jstips">
 <meta property="og:type" content="article">
-<meta property="og:title" content="improve-nested-conditionals">
+<meta property="og:title" content="[jstips] 중첩된 조건문 개선 if, switch">
 <meta property="og:url" content="http://qweqwe9ab.github.io/2019/01/14/improve-nested-conditionals/index.html">
 <meta property="og:site_name" content="밤에 하는 개발.">
-<meta property="og:description" content="Related Posts 중첩된 조건문 개선 jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하고 효율적으로 만들 수 있을지에 대해서 읽었습니다. 1234567891011121314if (color) &amp;#123;  if (color === &apos;black&apos;) &amp;#123;    printBlackBackground();  &amp;#125;">
+<meta property="og:description" content="중첩된 조건문 개선 jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하고 효율적으로 만들 수 있을지에 대해서 읽었습니다. 1234567891011121314if (color) &amp;#123;  if (color === &apos;black&apos;) &amp;#123;    printBlackBackground();  &amp;#125; else if (col">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://qweqwe9ab.github.io/images/jstips-animation.gif">
-<meta property="og:updated_time" content="2019-01-14T09:46:13.135Z">
+<meta property="og:updated_time" content="2019-01-14T10:34:16.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="improve-nested-conditionals">
-<meta name="twitter:description" content="Related Posts 중첩된 조건문 개선 jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하고 효율적으로 만들 수 있을지에 대해서 읽었습니다. 1234567891011121314if (color) &amp;#123;  if (color === &apos;black&apos;) &amp;#123;    printBlackBackground();  &amp;#125;">
+<meta name="twitter:title" content="[jstips] 중첩된 조건문 개선 if, switch">
+<meta name="twitter:description" content="중첩된 조건문 개선 jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하고 효율적으로 만들 수 있을지에 대해서 읽었습니다. 1234567891011121314if (color) &amp;#123;  if (color === &apos;black&apos;) &amp;#123;    printBlackBackground();  &amp;#125; else if (col">
 <meta name="twitter:image" content="http://qweqwe9ab.github.io/images/jstips-animation.gif">
     
     <link rel="canonical" href="http://qweqwe9ab.github.io/2019/01/14/improve-nested-conditionals/">
@@ -178,7 +178,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-        improve-nested-conditionals
+        [jstips] 중첩된 조건문 개선 if, switch
         </h1>
     
 
@@ -205,7 +205,7 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><p><img src="/images/jstips-animation.gif" alt=""></p>
+            <p><img src="/images/jstips-animation.gif" alt=""></p>
 <h2 id="중첩된-조건문-개선"><a href="#중첩된-조건문-개선" class="headerlink" title="중첩된 조건문 개선"></a>중첩된 조건문 개선</h2><hr>
 <p><a href="http://www.jstips.co/" target="_blank" rel="noopener">jstips</a>에서 <a href="http://www.jstips.co/en/javascript/improve-nested-conditionals/" target="_blank" rel="noopener">javascript를 사용할 때 중첩된 <strong>if</strong>문을 조금 더 깔끔하고 효율적으로 만들 수 있을지</a>에 대해서 읽었습니다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">if</span> (color) &#123;</span><br><span class="line">  <span class="keyword">if</span> (color === <span class="string">'black'</span>) &#123;</span><br><span class="line">    printBlackBackground();</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (color === <span class="string">'red'</span>) &#123;</span><br><span class="line">    printRedBackground();</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (color === <span class="string">'blue'</span>) &#123;</span><br><span class="line">    printBlueBackground();</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (color === <span class="string">'green'</span>) &#123;</span><br><span class="line">    printGreenBackground();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    printYellowBackground();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -217,16 +217,17 @@ ga('send', 'pageview');
 <p>중첩된 <strong>if</strong>문을 개선하는 가장 효율 적인 방법은 object를 사용하는 방법입니다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> colorObj = &#123;</span><br><span class="line">  <span class="string">'black'</span>: printBlackBackground,</span><br><span class="line">  <span class="string">'red'</span>: printRedBackground,</span><br><span class="line">  <span class="string">'blue'</span>: printBlueBackground,</span><br><span class="line">  <span class="string">'green'</span>: printGreenBackground,</span><br><span class="line">  <span class="string">'yellow'</span>: printYellowBackground</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (color <span class="keyword">in</span> colorObj) &#123;</span><br><span class="line">  colorObj[color]();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="jstips-목록"><a href="#jstips-목록" class="headerlink" title="jstips 목록"></a>jstips 목록</h3><ul>
-<li><a href="https://steemit.com/kr-newbie/@qweqwe9ab/jstips-push-concat-unshift" target="_blank" rel="noopener">[jstips] 배열에 요소 추가하기 push(),concat(),unshift()</a><h3 id="Related-Posts-1"><a href="#Related-Posts-1" class="headerlink" title="Related Posts"></a>Related Posts</h3></li>
+<li><a href="https://steemit.com/kr-newbie/@qweqwe9ab/jstips-push-concat-unshift" target="_blank" rel="noopener">[jstips] 배열에 요소 추가하기 push(),concat(),unshift()</a></li>
 </ul>
-
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>
         </div>
+        <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/14/insert-item-inside-an-array/" title="[jstips] 배열에 요소 추가하기 push(),concat(),unshift()" rel="bookmark">[jstips] 배열에 요소 추가하기 push(),concat(),unshift()</a></h3></div></li></ul>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://qweqwe9ab.github.io/2019/01/14/improve-nested-conditionals/" data-id="cjqw5dq3t00044f39l5buh0k5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://qweqwe9ab.github.io/2019/01/14/improve-nested-conditionals/" data-id="cjqw5zftu000dha392koz4vfd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -296,7 +297,7 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "bamdev"
         },
-        "headline": "improve-nested-conditionals",
+        "headline": "[jstips] 중첩된 조건문 개선 if, switch",
         "image": "http://qweqwe9ab.github.io/images/jstips-animation.gif",
         "keywords": "dev javascript jstips",
         "genre": "Dev javascript",
@@ -304,11 +305,11 @@ ga('send', 'pageview');
         "dateCreated": "2019-01-14",
         "dateModified": "2019-01-14",
         "url": "http://qweqwe9ab.github.io/2019/01/14/improve-nested-conditionals/",
-        "description": "Related Posts
+        "description": "
 중첩된 조건문 개선
 jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하고 효율적으로 만들 수 있을지에 대해서 읽었습니다.
-1234567891011121314if (color) &#123;  if (color === 'black') &#123;    printBlackBackground();  &#125;"
-        "wordCount": 626
+1234567891011121314if (color) &#123;  if (color === 'black') &#123;    printBlackBackground();  &#125; else if (col"
+        "wordCount": 620
     }
 </script>
 
@@ -385,7 +386,7 @@ jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하
     
         <a href="/2019/01/14/insert-item-inside-an-array/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">insert-item-inside-an-array</p>
+        <p class="article-nav-title">[jstips] 배열에 요소 추가하기 push(),concat(),unshift()</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -430,7 +431,7 @@ jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하
                             <a href="/2019/01/14/improve-nested-conditionals/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/jstips-animation.gif)" alt="improve-nested-conditionals" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/jstips-animation.gif)" alt="[jstips] 중첩된 조건문 개선 if, switch" class="thumbnail-image"></span>
     
     
 </a>
@@ -439,7 +440,7 @@ jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Dev/">Dev</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Dev/javascript/">javascript</a></p>
-                            <p class="item-title"><a href="/2019/01/14/improve-nested-conditionals/" class="title">improve-nested-conditionals</a></p>
+                            <p class="item-title"><a href="/2019/01/14/improve-nested-conditionals/" class="title">[jstips] 중첩된 조건문 개선 if, switch</a></p>
                             <p class="item-date"><time datetime="2019-01-14T09:04:48.000Z" itemprop="datePublished">2019-01-14</time></p>
                         </div>
                     </li>
@@ -450,7 +451,7 @@ jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하
                             <a href="/2019/01/14/insert-item-inside-an-array/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/jstips-animation.gif)" alt="insert-item-inside-an-array" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/jstips-animation.gif)" alt="[jstips] 배열에 요소 추가하기 push(),concat(),unshift()" class="thumbnail-image"></span>
     
     
 </a>
@@ -459,7 +460,7 @@ jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Dev/">Dev</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Dev/javascript/">javascript</a></p>
-                            <p class="item-title"><a href="/2019/01/14/insert-item-inside-an-array/" class="title">insert-item-inside-an-array</a></p>
+                            <p class="item-title"><a href="/2019/01/14/insert-item-inside-an-array/" class="title">[jstips] 배열에 요소 추가하기 push(),concat(),unshift()</a></p>
                             <p class="item-date"><time datetime="2019-01-14T09:01:39.000Z" itemprop="datePublished">2019-01-14</time></p>
                         </div>
                     </li>

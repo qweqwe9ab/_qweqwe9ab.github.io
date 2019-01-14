@@ -8,29 +8,29 @@
     </url>
 
     <url>
-        <loc>http://qweqwe9ab.github.io/categories/Dev/</loc>
-        <lastmod>2019-01-14T09:49:29.508Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://qweqwe9ab.github.io/categories/Dev/javascript/</loc>
-        <lastmod>2019-01-14T09:49:29.508Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://qweqwe9ab.github.io/categories/Etc/</loc>
-        <lastmod>2019-01-14T09:50:05.753Z</lastmod>
+        <lastmod>2019-01-14T10:34:18.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://qweqwe9ab.github.io/categories/Etc/Plan/</loc>
-        <lastmod>2019-01-14T09:50:05.753Z</lastmod>
+        <lastmod>2019-01-14T10:34:18.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://qweqwe9ab.github.io/categories/Dev/</loc>
+        <lastmod>2019-01-14T10:36:48.601Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://qweqwe9ab.github.io/categories/Dev/javascript/</loc>
+        <lastmod>2019-01-14T10:36:48.601Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
