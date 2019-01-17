@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qweqwe9ab.github.io/"/>
-  <updated>2019-01-17T08:27:31.988Z</updated>
+  <updated>2019-01-17T10:43:30.416Z</updated>
   <id>http://qweqwe9ab.github.io/</id>
   
   <author>
@@ -15,6 +15,80 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[자료구조][자바스크립트] 연결리스트(linked list)</title>
+    <link href="http://qweqwe9ab.github.io/2019/01/17/Javascript-Linked-List/"/>
+    <id>http://qweqwe9ab.github.io/2019/01/17/Javascript-Linked-List/</id>
+    <published>2019-01-17T08:40:16.000Z</published>
+    <updated>2019-01-17T10:43:30.416Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> linkedListNode = <span class="class"><span class="keyword">class</span> <span class="title">LinkedListNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(value, next = null) &#123;</span><br><span class="line">        <span class="keyword">this</span>.value = value;</span><br><span class="line">        <span class="keyword">this</span>.next = next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> linkedList = <span class="class"><span class="keyword">class</span> <span class="title">LinkedList</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123;</span><br><span class="line">        <span class="keyword">this</span>.head = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">this</span>.length = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    append(value) &#123;</span><br><span class="line">        <span class="keyword">const</span> node = <span class="keyword">new</span> linkedListNode(value);</span><br><span class="line">        <span class="keyword">let</span> current = <span class="keyword">this</span>.head;</span><br><span class="line">        <span class="keyword">if</span> (!current) &#123; <span class="comment">// 리스트가 비어있음</span></span><br><span class="line">            <span class="keyword">this</span>.head = node;</span><br><span class="line">            <span class="keyword">this</span>.length++;</span><br><span class="line">            <span class="keyword">return</span> node;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">while</span> (current.next) &#123; <span class="comment">//리스트의 끝을 찾아서</span></span><br><span class="line">                current = current.next;</span><br><span class="line">            &#125;</span><br><span class="line">            current.next = node; <span class="comment">//끝에 추가</span></span><br><span class="line">            <span class="keyword">this</span>.length++;</span><br><span class="line">            <span class="keyword">return</span> node;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    find(position) &#123;</span><br><span class="line">        <span class="keyword">let</span> current = <span class="keyword">this</span>.head;</span><br><span class="line">        <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (count &lt; position) &#123;</span><br><span class="line">            current = current.next;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> current? current.value : <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">delete</span>(position) &#123;</span><br><span class="line">        <span class="keyword">let</span> current = <span class="keyword">this</span>.head;</span><br><span class="line">        <span class="keyword">let</span> before;</span><br><span class="line">        <span class="keyword">let</span> remove;</span><br><span class="line">        <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (position == <span class="number">0</span>) &#123; <span class="comment">//제일 앞 삭제</span></span><br><span class="line">            remove = <span class="keyword">this</span>.head;</span><br><span class="line">            <span class="keyword">this</span>.head = <span class="keyword">this</span>.head.next;</span><br><span class="line">            <span class="keyword">this</span>.length--;</span><br><span class="line">            <span class="keyword">return</span> remove;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">console</span></span><br><span class="line">            <span class="keyword">while</span> (count &lt; position) &#123;</span><br><span class="line">                before = current;</span><br><span class="line">                count++;</span><br><span class="line">                current = current.next;</span><br><span class="line">            &#125;</span><br><span class="line">            remove = current;</span><br><span class="line">            before.next = remove? remove.next : <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">this</span>.length--;</span><br><span class="line">            <span class="keyword">return</span> remove;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> testLink = <span class="keyword">new</span> linkedList();</span><br><span class="line"><span class="built_in">console</span>.log(testLink);</span><br><span class="line">testLink.append(<span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(testLink)</span><br><span class="line">testLink.append(<span class="number">4</span>);</span><br><span class="line"><span class="built_in">console</span>.log(testLink)</span><br><span class="line"><span class="built_in">console</span>.log(testLink.delete(<span class="number">1</span>))</span><br><span class="line"><span class="built_in">console</span>.log(testLink)</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">LinkedList &#123; head: null, length: 0 &#125;</span><br><span class="line">LinkedList &#123; head: LinkedListNode &#123; value: 3, next: null &#125;, length: 1 &#125;</span><br><span class="line">LinkedList &#123;</span><br><span class="line">  head:</span><br><span class="line">   LinkedListNode &#123; value: 3, next: LinkedListNode &#123; value: 4, next: null &#125; &#125;,</span><br><span class="line">  length: 2 &#125;</span><br><span class="line">LinkedListNode &#123; value: 4, next: null &#125;</span><br><span class="line">LinkedList &#123; head: LinkedListNode &#123; value: 3, next: null &#125;, length: 1 &#125;</span><br></pre></td></tr></table></figure><p><a href="https://github.com/trekhleb/javascript-algorithms/blob/master/src/data-structures/linked-list/LinkedList.js" target="_blank" rel="noopener"></a><br><a href="https://www.zerocho.com/category/Algorithm/post/58008a628475ed00152d6c4d" target="_blank" rel="noopener"></a></p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span 
+      
+    
+    </summary>
+    
+      <category term="Dev" scheme="http://qweqwe9ab.github.io/categories/Dev/"/>
+    
+      <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
+    
+    
+      <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
+    
+      <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="datastructure" scheme="http://qweqwe9ab.github.io/tags/datastructure/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
+      <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
+    
+      <category term="linkedlist" scheme="http://qweqwe9ab.github.io/tags/linkedlist/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[자료구조][자바스크립트] 큐(Queue)</title>
+    <link href="http://qweqwe9ab.github.io/2019/01/17/Javascript-Queue/"/>
+    <id>http://qweqwe9ab.github.io/2019/01/17/Javascript-Queue/</id>
+    <published>2019-01-17T08:40:01.000Z</published>
+    <updated>2019-01-17T10:43:23.597Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createQueue</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> queue = [];</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        enqueue(item) &#123;</span><br><span class="line">            queue.unshift(item);</span><br><span class="line">        &#125;,</span><br><span class="line">        dequeue() &#123;</span><br><span class="line">            <span class="keyword">return</span> queue.pop();</span><br><span class="line">        &#125;,</span><br><span class="line">        peek() &#123;</span><br><span class="line">            <span class="keyword">return</span> queue[queue.length <span class="number">-1</span>];</span><br><span class="line">        &#125;,</span><br><span class="line">        get length() &#123;</span><br><span class="line">            <span class="keyword">return</span> queue.length;</span><br><span class="line">        &#125;,</span><br><span class="line">        isEmpty() &#123;</span><br><span class="line">            <span class="keyword">return</span> queue.length === <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> q = createQueue();</span><br><span class="line">q.enqueue(<span class="number">1</span>);</span><br><span class="line">q.enqueue(<span class="number">2</span>);</span><br><span class="line">q.enqueue(<span class="number">3</span>);</span><br><span class="line">q.enqueue(<span class="number">4</span>);</span><br><span class="line"><span class="built_in">console</span>.log(q.isEmpty());</span><br><span class="line"><span class="built_in">console</span>.log(q.length)</span><br><span class="line"><span class="built_in">console</span>.log(q.dequeue());</span><br><span class="line"><span class="built_in">console</span>.log(q.length)</span><br><span class="line"><span class="built_in">console</span>.log(q.peek())</span><br><span class="line"><span class="built_in">console</span>.log(q.length)</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">false</span></span><br><span class="line">4</span><br><span class="line">1</span><br><span class="line">3</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td></tr></table></figure><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span 
+      
+    
+    </summary>
+    
+      <category term="Dev" scheme="http://qweqwe9ab.github.io/categories/Dev/"/>
+    
+      <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
+    
+    
+      <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
+    
+      <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="datastructure" scheme="http://qweqwe9ab.github.io/tags/datastructure/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
+      <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
+    
+      <category term="queue" scheme="http://qweqwe9ab.github.io/tags/queue/"/>
+    
+  </entry>
   
   <entry>
     <title>REST API</title>
@@ -44,9 +118,9 @@
     
       <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
-      <category term="이직" scheme="http://qweqwe9ab.github.io/tags/%EC%9D%B4%EC%A7%81/"/>
-    
       <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
+    
+      <category term="이직" scheme="http://qweqwe9ab.github.io/tags/%EC%9D%B4%EC%A7%81/"/>
     
       <category term="restapi" scheme="http://qweqwe9ab.github.io/tags/restapi/"/>
     
@@ -79,9 +153,9 @@
     
       <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
-      <category term="이직" scheme="http://qweqwe9ab.github.io/tags/%EC%9D%B4%EC%A7%81/"/>
-    
       <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
+    
+      <category term="이직" scheme="http://qweqwe9ab.github.io/tags/%EC%9D%B4%EC%A7%81/"/>
     
       <category term="http" scheme="http://qweqwe9ab.github.io/tags/http/"/>
     
