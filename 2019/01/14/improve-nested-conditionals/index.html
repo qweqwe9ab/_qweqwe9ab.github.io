@@ -21,7 +21,7 @@
 <meta property="og:description" content="중첩된 조건문 개선 jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하고 효율적으로 만들 수 있을지에 대해서 읽었습니다. 1234567891011121314if (color) &amp;#123;  if (color === &apos;black&apos;) &amp;#123;    printBlackBackground();  &amp;#125; else if (col">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://qweqwe9ab.github.io/images/jstips-animation.gif">
-<meta property="og:updated_time" content="2019-01-17T11:03:31.864Z">
+<meta property="og:updated_time" content="2019-01-17T11:07:23.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[jstips] 중첩된 조건문 개선 if, switch">
 <meta name="twitter:description" content="중첩된 조건문 개선 jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하고 효율적으로 만들 수 있을지에 대해서 읽었습니다. 1234567891011121314if (color) &amp;#123;  if (color === &apos;black&apos;) &amp;#123;    printBlackBackground();  &amp;#125; else if (col">
@@ -103,7 +103,7 @@ ga('send', 'pageview');
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Dev/">Dev</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Dev/Etc/">Etc</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Dev/Javascript/">Javascript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Dev/javascript/">javascript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Etc/">Etc</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Etc/Plan/">Plan</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Dev/">Dev</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Dev/Etc/">Etc</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Dev/Javascript/">Javascript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Etc/">Etc</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Etc/Plan/">Plan</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -170,7 +170,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Dev/">Dev</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Dev/javascript/">javascript</a>
+    <a class="page-title-link" href="/categories/Dev/">Dev</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Dev/Javascript/">Javascript</a>
     </h1>
 </div>
 
@@ -222,13 +222,13 @@ ga('send', 'pageview');
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> colorObj = &#123;</span><br><span class="line">  <span class="string">'black'</span>: printBlackBackground,</span><br><span class="line">  <span class="string">'red'</span>: printRedBackground,</span><br><span class="line">  <span class="string">'blue'</span>: printBlueBackground,</span><br><span class="line">  <span class="string">'green'</span>: printGreenBackground,</span><br><span class="line">  <span class="string">'yellow'</span>: printYellowBackground</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (color <span class="keyword">in</span> colorObj) &#123;</span><br><span class="line">  colorObj[color]();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>
         </div>
-        <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/14/insert-item-inside-an-array/" title="[jstips] 배열에 요소 추가하기 push(),concat(),unshift()" rel="bookmark">[jstips] 배열에 요소 추가하기 push(),concat(),unshift()</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/16/Javascript-Stack/" title="[자료구조][자바스크립트] 스택(Stack)" rel="bookmark">[자료구조][자바스크립트] 스택(Stack)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/17/Javascript-Linked-List/" title="[자료구조][자바스크립트] 연결리스트(linked list)" rel="bookmark">[자료구조][자바스크립트] 연결리스트(linked list)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/16/Javascript-Queue/" title="[자료구조][자바스크립트] 큐(Queue)" rel="bookmark">[자료구조][자바스크립트] 큐(Queue)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/17/http-vs-https/" title="http와 https" rel="bookmark">http와 https</a></h3></div></li></ul>
+        <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/14/insert-item-inside-an-array/" title="[jstips] 배열에 요소 추가하기 push(),concat(),unshift()" rel="bookmark">[jstips] 배열에 요소 추가하기 push(),concat(),unshift()</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/16/Javascript-Queue/" title="[자료구조][자바스크립트] 큐(Queue)" rel="bookmark">[자료구조][자바스크립트] 큐(Queue)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/16/Javascript-Stack/" title="[자료구조][자바스크립트] 스택(Stack)" rel="bookmark">[자료구조][자바스크립트] 스택(Stack)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/17/Javascript-Linked-List/" title="[자료구조][자바스크립트] 연결리스트(linked list)" rel="bookmark">[자료구조][자바스크립트] 연결리스트(linked list)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/17/Rest-API/" title="REST API" rel="bookmark">REST API</a></h3></div></li></ul>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://qweqwe9ab.github.io/2019/01/14/improve-nested-conditionals/" data-id="cjr0iell900044w393f0h2onu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://qweqwe9ab.github.io/2019/01/14/improve-nested-conditionals/" data-id="cjr0ih0g700127z390de71ejy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -301,7 +301,7 @@ ga('send', 'pageview');
         "headline": "[jstips] 중첩된 조건문 개선 if, switch",
         "image": "http://qweqwe9ab.github.io/images/jstips-animation.gif",
         "keywords": "dev javascript jstips",
-        "genre": "Dev javascript",
+        "genre": "Dev Javascript",
         "datePublished": "2019-01-14",
         "dateCreated": "2019-01-14",
         "dateModified": "2019-01-17",
@@ -515,7 +515,7 @@ jstips에서 javascript를 사용할 때 중첩된 if문을 조금 더 깔끔하
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dev/">Dev</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Dev/Etc/">Etc</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dev/Javascript/">Javascript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dev/javascript/">javascript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/">Etc</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/Plan/">Plan</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dev/">Dev</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Dev/Etc/">Etc</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dev/Javascript/">Javascript</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/">Etc</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Etc/Plan/">Plan</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
