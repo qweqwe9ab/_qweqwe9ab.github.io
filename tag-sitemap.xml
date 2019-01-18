@@ -45,27 +45,6 @@
     </url>
 
     <url>
-        <loc>http://qweqwe9ab.github.io/tags/queue/</loc>
-        <lastmod>2019-01-17T11:07:38.182Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://qweqwe9ab.github.io/tags/datastructure/</loc>
-        <lastmod>2019-01-17T11:07:40.093Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://qweqwe9ab.github.io/tags/stack/</loc>
-        <lastmod>2019-01-17T11:07:40.093Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://qweqwe9ab.github.io/tags/plan/</loc>
         <lastmod>2019-01-17T19:10:15.563Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -87,36 +66,57 @@
     </url>
 
     <url>
-        <loc>http://qweqwe9ab.github.io/tags/dev/</loc>
-        <lastmod>2019-01-18T06:40:21.291Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://qweqwe9ab.github.io/tags/javascript/</loc>
-        <lastmod>2019-01-18T06:40:21.291Z</lastmod>
+        <loc>http://qweqwe9ab.github.io/tags/codingtest/</loc>
+        <lastmod>2019-01-18T06:45:26.136Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://qweqwe9ab.github.io/tags/etc/</loc>
-        <lastmod>2019-01-18T06:40:21.291Z</lastmod>
+        <lastmod>2019-01-18T08:41:48.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://qweqwe9ab.github.io/tags/dev/</loc>
+        <lastmod>2019-01-18T08:41:48.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://qweqwe9ab.github.io/tags/javascript/</loc>
+        <lastmod>2019-01-18T08:41:48.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://qweqwe9ab.github.io/tags/datastructure/</loc>
+        <lastmod>2019-01-18T08:41:48.874Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://qweqwe9ab.github.io/tags/interview/</loc>
-        <lastmod>2019-01-18T06:40:21.291Z</lastmod>
+        <lastmod>2019-01-18T08:41:48.874Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://qweqwe9ab.github.io/tags/codingtest/</loc>
-        <lastmod>2019-01-18T06:40:21.291Z</lastmod>
+        <loc>http://qweqwe9ab.github.io/tags/queue/</loc>
+        <lastmod>2019-01-18T08:41:48.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://qweqwe9ab.github.io/tags/stack/</loc>
+        <lastmod>2019-01-18T08:41:48.874Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

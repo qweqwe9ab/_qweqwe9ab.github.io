@@ -6,24 +6,28 @@
     
 
     
-    <title>Resume | 밤에 하는 개발</title>
+    <title>[자료구조][자바스크립트] 스택으로 큐 구현 javascript | 밤에 하는 개발</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="사용 언어  node.js javascript(es6) jQuery  DB mysql  버전관리 git  기타 aws (ec2, s3, RDS)  2015~ 서버 개발자 (node.js, aws, mysql..) push server(node.js, kue) 운영툴 / 통계툴 결제서비스 비디오광고 콜백서버 간단한 웹페이지  개인프로젝트인스타그램 봇 개발no">
-<meta name="keywords" content="programming, computer, javascript, node.js, node, nodejs, interview, resume,developer,aws,ec2,s3,mysql">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Resume">
-<meta property="og:url" content="http://qweqwe9ab.github.io/resume/index.html">
-<meta property="og:site_name" content="밤에 하는 개발">
-<meta property="og:description" content="사용 언어  node.js javascript(es6) jQuery  DB mysql  버전관리 git  기타 aws (ec2, s3, RDS)  2015~ 서버 개발자 (node.js, aws, mysql..) push server(node.js, kue) 운영툴 / 통계툴 결제서비스 비디오광고 콜백서버 간단한 웹페이지  개인프로젝트인스타그램 봇 개발no">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-17T19:05:51.186Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Resume">
-<meta name="twitter:description" content="사용 언어  node.js javascript(es6) jQuery  DB mysql  버전관리 git  기타 aws (ec2, s3, RDS)  2015~ 서버 개발자 (node.js, aws, mysql..) push server(node.js, kue) 운영툴 / 통계툴 결제서비스 비디오광고 콜백서버 간단한 웹페이지  개인프로젝트인스타그램 봇 개발no">
+        <meta name="keywords" content="etc,dev,javascript,datastructure,interview,queue,stack">
     
-    <link rel="canonical" href="http://qweqwe9ab.github.io/resume/">
+    <meta name="description" content="오늘은 스택으로 큐를 구현하는 문제를 살펴보겠습니다.스택([자료구조][자바스크립트] 스택(Stack))은 LIFO - Last In First Out 방식이다.간단하게 설명하면 책상 위에 책을 하나씩 쌓아두고 위에서부터 하나씩 집어서 읽는 것이다.  나중에 쌓은(제일 위에 있는) 책을 먼저 집어서 읽는 방식  큐([자료구조][자바스크립트] 큐(Queue))">
+<meta name="keywords" content="etc,dev,javascript,datastructure,interview,queue,stack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[자료구조][자바스크립트] 스택으로 큐 구현 javascript">
+<meta property="og:url" content="http://qweqwe9ab.github.io/2019/01/18/Queue-Using-Stacks/index.html">
+<meta property="og:site_name" content="밤에 하는 개발">
+<meta property="og:description" content="오늘은 스택으로 큐를 구현하는 문제를 살펴보겠습니다.스택([자료구조][자바스크립트] 스택(Stack))은 LIFO - Last In First Out 방식이다.간단하게 설명하면 책상 위에 책을 하나씩 쌓아두고 위에서부터 하나씩 집어서 읽는 것이다.  나중에 쌓은(제일 위에 있는) 책을 먼저 집어서 읽는 방식  큐([자료구조][자바스크립트] 큐(Queue))">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://qweqwe9ab.github.io/images/logo-header.png">
+<meta property="og:updated_time" content="2019-01-18T08:41:48.874Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[자료구조][자바스크립트] 스택으로 큐 구현 javascript">
+<meta name="twitter:description" content="오늘은 스택으로 큐를 구현하는 문제를 살펴보겠습니다.스택([자료구조][자바스크립트] 스택(Stack))은 LIFO - Last In First Out 방식이다.간단하게 설명하면 책상 위에 책을 하나씩 쌓아두고 위에서부터 하나씩 집어서 읽는 것이다.  나중에 쌓은(제일 위에 있는) 책을 먼저 집어서 읽는 방식  큐([자료구조][자바스크립트] 큐(Queue))">
+<meta name="twitter:image" content="http://qweqwe9ab.github.io/images/logo-header.png">
+    
+    <link rel="canonical" href="http://qweqwe9ab.github.io/2019/01/18/queue-using-stacks/">
 
     
 
@@ -166,60 +170,96 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="/resume/index.html">Resume</em>
+    <a class="page-title-link" href="/categories/Dev/">Dev</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Dev/Javascript/">Javascript</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="page-" class="article article-single article-type-page" itemscope="" itemprop="blogPost">
+                            <article id="post-Queue-Using-Stacks" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Resume
+        [자료구조][자바스크립트] 스택으로 큐 구현 javascript
         </h1>
     
 
             </header>
         
         
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/01/18/Queue-Using-Stacks/" class="article-date">
+            <time datetime="2019-01-18T06:46:22.000Z" itemprop="datePublished">2019-01-18</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/datastructure/">datastructure</a>, <a class="tag-link" href="/tags/dev/">dev</a>, <a class="tag-link" href="/tags/etc/">etc</a>, <a class="tag-link" href="/tags/interview/">interview</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>, <a class="tag-link" href="/tags/queue/">queue</a>, <a class="tag-link" href="/tags/stack/">stack</a>
+    </div>
+
+            </div>
+        
         
         <div class="article-entry" itemprop="articleBody">
-            <p>사용 언어</p>
+            <p>오늘은 스택으로 큐를 구현하는 문제를 살펴보겠습니다.<br>스택(<a href="/2019/01/16/Javascript-Stack/" title="[자료구조][자바스크립트] 스택(Stack)">[자료구조][자바스크립트] 스택(Stack)</a>)은 LIFO - Last In First Out 방식이다.<br>간단하게 설명하면 책상 위에 책을 하나씩 쌓아두고 위에서부터 하나씩 집어서 읽는 것이다.</p>
 <ul>
-<li>node.js</li>
-<li>javascript(es6)</li>
-<li>jQuery</li>
+<li>나중에 쌓은(제일 위에 있는) 책을 먼저 집어서 읽는 방식</li>
 </ul>
-<h2 id="DB"><a href="#DB" class="headerlink" title="DB"></a>DB</h2><ul>
-<li>mysql</li>
+<p>큐(<a href="/2019/01/16/Javascript-Queue/" title="[자료구조][자바스크립트] 큐(Queue)">[자료구조][자바스크립트] 큐(Queue)</a>)는  FIFO - First In First Out 방식이다.<br>간단하게 설명하면 카페에서 한 줄로 서서 주문을 하는 것이다.</p>
+<ul>
+<li>제일 먼저 온 사람이 먼저 계산하는 방식</li>
 </ul>
-<h2 id="버전관리"><a href="#버전관리" class="headerlink" title="버전관리"></a>버전관리</h2><ul>
-<li>git</li>
+<p>스택과 큐에 대한 설명과 코드는 이 블로그의 글을 참조하고, 오늘은 스택으로 큐를 구현해 보겠습니다.</p>
+<h1 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h1><p>스택을 사용하여 큐를 구현하여라</p>
+<ul>
+<li>enqueue</li>
+<li>dequeue</li>
+<li>peek</li>
+<li>length</li>
+<li>isEmpty</li>
 </ul>
-<h2 id="기타"><a href="#기타" class="headerlink" title="기타"></a>기타</h2><ul>
-<li>aws (ec2, s3, RDS)</li>
+<h3 id="힌트"><a href="#힌트" class="headerlink" title="힌트"></a>힌트</h3><p>스택으로 큐를 구현하기 위해서는 스택을 두 개 사용하여야 한다.<br>하나는 inStack(enqueue시 쌓이는 스택), 다른 하나는 outStack(dequeue시 꺼내는 스택)</p>
+<h3 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h3><h4 id="Enqueue"><a href="#Enqueue" class="headerlink" title="Enqueue"></a>Enqueue</h4><ul>
+<li>outStack이 비어있는지 확인하고, outStack에 data가 있다면, inStack으로 옮겨준다.</li>
+<li>outStack이 비어있다면, inStack에 데이터를 넣는다.</li>
 </ul>
-<h2 id="2015"><a href="#2015" class="headerlink" title="2015~"></a>2015~</h2><ul>
-<li>서버 개발자 (node.js, aws, mysql..)</li>
-<li>push server(node.js, kue)</li>
-<li>운영툴 / 통계툴</li>
-<li>결제서비스</li>
-<li>비디오광고 콜백서버</li>
-<li>간단한 웹페이지</li>
+<h4 id="Dequeue"><a href="#Dequeue" class="headerlink" title="Dequeue"></a>Dequeue</h4><ul>
+<li>inStack이 비어있는지 확인하고, inStack에 data가 있다면, outStack으로 옮겨준다.</li>
+<li>inStack이 비어있다면, outStack에서 data를 뽑는다.</li>
 </ul>
-<h2 id="개인프로젝트"><a href="#개인프로젝트" class="headerlink" title="개인프로젝트"></a>개인프로젝트</h2><h3 id="인스타그램-봇-개발"><a href="#인스타그램-봇-개발" class="headerlink" title="인스타그램 봇 개발"></a>인스타그램 봇 개발</h3><p>node.js, puppeteer , AWS(ec2)</p>
-
+<h3 id="Enqueue-설명"><a href="#Enqueue-설명" class="headerlink" title="Enqueue 설명"></a>Enqueue 설명</h3><img src="/2019/01/18/Queue-Using-Stacks/queueusingStack1.jpg">
+<p>stack을 두개를 만든다.<br>하나는 Enqueue할 때 사용하는 inStack, 다른 하나는 Dequeue할 때 사용하는 outStack.</p>
+<img src="/2019/01/18/Queue-Using-Stacks/queueusingStack2.jpg">
+<img src="/2019/01/18/Queue-Using-Stacks/queueusingStack3.jpg">
+<p>outStack이 비어있다면, inStack에 데이터를 넣는다.</p>
+<img src="/2019/01/18/Queue-Using-Stacks/queueusingStack4.jpg">
+<img src="/2019/01/18/Queue-Using-Stacks/queueusingStack2.jpg">
+<img src="/2019/01/18/Queue-Using-Stacks/queueusingStack3.jpg">
+<p>inStack이 비어있는지 확인하고, inStack에 data가 있다면, outStack으로 옮겨주고 data를 inStack으로 넣는다.</p>
+<h3 id="Dequeue-설명"><a href="#Dequeue-설명" class="headerlink" title="Dequeue 설명"></a>Dequeue 설명</h3><img src="/2019/01/18/Queue-Using-Stacks/queueusingStack7.jpg">
+<img src="/2019/01/18/Queue-Using-Stacks/queueusingStack5.jpg">
+<p>inStack이 비어있는지 확인하고, inStack에 data가 있다면, outStack으로 옮겨준다.</p>
+<img src="/2019/01/18/Queue-Using-Stacks/queueusingStack6.jpg">
+<p>inStack이 비어있다면, outStack에서 data를 뽑는다.</p>
+<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><h4 id="javascript-로-구현"><a href="#javascript-로-구현" class="headerlink" title="javascript 로 구현"></a>javascript 로 구현</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> stack = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> stackArray = [];</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        push(item) &#123;</span><br><span class="line">            stackArray.push(item);</span><br><span class="line">        &#125;,</span><br><span class="line">        pop() &#123;</span><br><span class="line">            <span class="keyword">return</span> stackArray.pop();</span><br><span class="line">        &#125;,</span><br><span class="line">        peek() &#123;</span><br><span class="line">            <span class="keyword">return</span> stackArray[stackArray.length - <span class="number">1</span>];</span><br><span class="line">        &#125;,</span><br><span class="line">        get length() &#123;</span><br><span class="line">            <span class="keyword">return</span> stackArray.length;</span><br><span class="line">        &#125;,</span><br><span class="line">        isEmpty() &#123;</span><br><span class="line">            <span class="keyword">return</span> stackArray.length === <span class="number">0</span>;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> queue = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> inStack = stack();</span><br><span class="line">    <span class="keyword">const</span> outStack = stack();</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        enqueue(item) &#123;</span><br><span class="line">            <span class="keyword">if</span>(!outStack.isEmpty()) &#123;</span><br><span class="line">                <span class="keyword">while</span>(!outStack.isEmpty()) &#123;</span><br><span class="line">                    inStack.push(outStack.pop());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            inStack.push(item);</span><br><span class="line">        &#125;,</span><br><span class="line">        dequeue() &#123;</span><br><span class="line">            <span class="keyword">if</span>(!inStack.isEmpty()) &#123;</span><br><span class="line">                <span class="keyword">while</span>(!inStack.isEmpty()) &#123;</span><br><span class="line">                    outStack.push(inStack.pop());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> outStack.pop();</span><br><span class="line">        &#125;,</span><br><span class="line">        peek() &#123;</span><br><span class="line">            <span class="keyword">if</span>(!inStack.isEmpty()) &#123;</span><br><span class="line">                <span class="keyword">while</span>(!inStack.isEmpty()) &#123;</span><br><span class="line">                    outStack.push(inStack.pop());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> outStack.peek();</span><br><span class="line">        &#125;,</span><br><span class="line">        get length() &#123;</span><br><span class="line">            <span class="keyword">if</span>(!inStack.isEmpty()) &#123;</span><br><span class="line">                <span class="keyword">while</span>(!inStack.isEmpty()) &#123;</span><br><span class="line">                    outStack.push(inStack.pop());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> outStack.length;</span><br><span class="line">        &#125;,</span><br><span class="line">        isEmpty() &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.length === <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> q = queue();</span><br><span class="line"><span class="built_in">console</span>.log(q.isEmpty())</span><br><span class="line">q.enqueue(<span class="number">1</span>)</span><br><span class="line"><span class="built_in">console</span>.log(q.peek())</span><br><span class="line">q.enqueue(<span class="number">2</span>)</span><br><span class="line">q.enqueue(<span class="number">3</span>)</span><br><span class="line"><span class="built_in">console</span>.log(q.peek())</span><br><span class="line">q.enqueue(<span class="number">4</span>);</span><br><span class="line"><span class="built_in">console</span>.log(q.dequeue());</span><br><span class="line"><span class="built_in">console</span>.log(q.isEmpty())</span><br><span class="line"><span class="built_in">console</span>.log(q.dequeue());</span><br></pre></td></tr></table></figure>
+<h4 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">true</span></span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line"><span class="literal">false</span></span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>
         </div>
-        
+        <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/16/Javascript-Queue/" title="[자료구조][자바스크립트] 큐(Queue)" rel="bookmark">[자료구조][자바스크립트] 큐(Queue)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/16/Javascript-Stack/" title="[자료구조][자바스크립트] 스택(Stack)" rel="bookmark">[자료구조][자바스크립트] 스택(Stack)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/17/Javascript-Linked-List/" title="[자료구조][자바스크립트] 연결리스트(linked list)" rel="bookmark">[자료구조][자바스크립트] 연결리스트(linked list)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/17/http-vs-https/" title="http와 https" rel="bookmark">http와 https</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/17/Rest-API/" title="REST API" rel="bookmark">REST API</a></h3></div></li></ul>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://qweqwe9ab.github.io/resume/index.html" data-id="cjr1pbntb004g8u39wbq3qf6c" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://qweqwe9ab.github.io/2019/01/18/Queue-Using-Stacks/" data-id="cjr1pbnk2000l8u39d44e6s17" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -289,39 +329,20 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "밤에 하는 개발"
         },
-        "headline": "Resume",
-        "image": "http://qweqwe9ab.github.io",
-        
-        
+        "headline": "[자료구조][자바스크립트] 스택으로 큐 구현 javascript",
+        "image": "http://qweqwe9ab.github.io/images/logo-header.png",
+        "keywords": "etc dev javascript datastructure interview queue stack",
+        "genre": "Dev Javascript",
         "datePublished": "2019-01-18",
         "dateCreated": "2019-01-18",
         "dateModified": "2019-01-18",
-        "url": "http://qweqwe9ab.github.io/resume/index.html",
-        "description": "사용 언어
+        "url": "http://qweqwe9ab.github.io/2019/01/18/Queue-Using-Stacks/",
+        "description": "오늘은 스택으로 큐를 구현하는 문제를 살펴보겠습니다.스택([자료구조][자바스크립트] 스택(Stack))은 LIFO - Last In First Out 방식이다.간단하게 설명하면 책상 위에 책을 하나씩 쌓아두고 위에서부터 하나씩 집어서 읽는 것이다.
 
-node.js
-javascript(es6)
-jQuery
+나중에 쌓은(제일 위에 있는) 책을 먼저 집어서 읽는 방식
 
-DB
-mysql
-
-버전관리
-git
-
-기타
-aws (ec2, s3, RDS)
-
-2015~
-서버 개발자 (node.js, aws, mysql..)
-push server(node.js, kue)
-운영툴 / 통계툴
-결제서비스
-비디오광고 콜백서버
-간단한 웹페이지
-
-개인프로젝트인스타그램 봇 개발no"
-        "wordCount": 46
+큐([자료구조][자바스크립트] 큐(Queue))"
+        "wordCount": 1098
     }
 </script>
 
@@ -381,6 +402,19 @@ push server(node.js, kue)
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/01/18/Codewars-Greed-is-Good/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">[Codewars] 주사위 게임 &#34;Greed is Good&#34;</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -589,7 +623,7 @@ push server(node.js, kue)
     var disqus_shortname = 'qweqwe9ab';
     
     
-    var disqus_url = 'http://qweqwe9ab.github.io/resume/index.html';
+    var disqus_url = 'http://qweqwe9ab.github.io/2019/01/18/Queue-Using-Stacks/';
     
     (function() {
     var dsq = document.createElement('script');
