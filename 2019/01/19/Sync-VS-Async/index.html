@@ -6,20 +6,28 @@
     
 
     
-    <title>Tag: https | 밤에 하는 개발</title>
+    <title>동기와 비동기 | 밤에 하는 개발</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="programming, computer, javascript, node.js, node, nodejs, interview, resume,developer,aws,ec2,s3,mysql">
-<meta property="og:type" content="website">
-<meta property="og:title" content="밤에 하는 개발">
-<meta property="og:url" content="http://qweqwe9ab.github.io/tags/https/index.html">
-<meta property="og:site_name" content="밤에 하는 개발">
-<meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="밤에 하는 개발">
+        <meta name="keywords" content="dev,javascript,etc,interview,nodejs">
     
-    <link rel="canonical" href="http://qweqwe9ab.github.io/tags/https/">
+    <meta name="description" content="설명동기여러작업을 진행 할때 하나의 작업이 끝날때 까지 기다렸다가 다음 작업을 진행하는 것.  비동기여러작업을 진행 할때 하나의 작업을 실행하고 다음 작업으로 넘어간다.이전에 실행한 작업은 작업이 끝나고 callback을 넘긴다. 비유간단하게 설명하면 동기는 카페에서 손님에게 주문을 받고 커피를 만들어서 전달하고 다음 손님으로 넘어가는 것 이고 비동기는 카">
+<meta name="keywords" content="dev,javascript,etc,interview,nodejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="동기와 비동기">
+<meta property="og:url" content="http://qweqwe9ab.github.io/2019/01/19/Sync-VS-Async/index.html">
+<meta property="og:site_name" content="밤에 하는 개발">
+<meta property="og:description" content="설명동기여러작업을 진행 할때 하나의 작업이 끝날때 까지 기다렸다가 다음 작업을 진행하는 것.  비동기여러작업을 진행 할때 하나의 작업을 실행하고 다음 작업으로 넘어간다.이전에 실행한 작업은 작업이 끝나고 callback을 넘긴다. 비유간단하게 설명하면 동기는 카페에서 손님에게 주문을 받고 커피를 만들어서 전달하고 다음 손님으로 넘어가는 것 이고 비동기는 카">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://qweqwe9ab.github.io/images/logo-header.png">
+<meta property="og:updated_time" content="2019-01-19T09:13:02.893Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="동기와 비동기">
+<meta name="twitter:description" content="설명동기여러작업을 진행 할때 하나의 작업이 끝날때 까지 기다렸다가 다음 작업을 진행하는 것.  비동기여러작업을 진행 할때 하나의 작업을 실행하고 다음 작업으로 넘어간다.이전에 실행한 작업은 작업이 끝나고 callback을 넘긴다. 비유간단하게 설명하면 동기는 카페에서 손님에게 주문을 받고 커피를 만들어서 전달하고 다음 손님으로 넘어가는 것 이고 비동기는 카">
+<meta name="twitter:image" content="http://qweqwe9ab.github.io/images/logo-header.png">
+    
+    <link rel="canonical" href="http://qweqwe9ab.github.io/2019/01/19/sync-vs-async/">
 
     
 
@@ -162,80 +170,156 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>https</em>
+    <a class="page-title-link" href="/categories/Dev/">Dev</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Dev/Javascript/">Javascript</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Sync-VS-Async" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/01/17/http-vs-https/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://qweqwe9ab.github.io/2019/01/17/http-vs-https/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Dev/">Dev</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Dev/Etc/">Etc</a>
-            </div>
-            <div class="date"><time datetime="2019-01-17T07:15:54.000Z" itemprop="datePublished">2019-01-17</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/01/17/http-vs-https/">http와 https</a>
+        동기와 비동기
         </h1>
     
 
-        <p class="article-excerpt">
-            Related Postshttp (Hyper Text Transfer Protocol)
-Client와 Server가 메세지를 주고 받는 통신 규약
-http://로 시작
-메세지를 암호화 하지 않음
-
-https (Hyper Text Transfer Protocol Secure Socket Layer)
-Client와 Server가 메세지를 주고 받는 통신 규약
-
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/01/19/Sync-VS-Async/" class="article-date">
+            <time datetime="2019-01-19T08:42:36.000Z" itemprop="datePublished">2019-01-19</time>
+        </a>
     </div>
-</article>
-    
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/dev/">dev</a>, <a class="tag-link" href="/tags/etc/">etc</a>, <a class="tag-link" href="/tags/interview/">interview</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>, <a class="tag-link" href="/tags/nodejs/">nodejs</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h2><h3 id="동기"><a href="#동기" class="headerlink" title="동기"></a>동기</h3><p>여러작업을 진행 할때 하나의 작업이 끝날때 까지 기다렸다가 다음 작업을 진행하는 것. </p>
+<h3 id="비동기"><a href="#비동기" class="headerlink" title="비동기"></a>비동기</h3><p>여러작업을 진행 할때 하나의 작업을 실행하고 다음 작업으로 넘어간다.<br>이전에 실행한 작업은 작업이 끝나고 <code>callback</code>을 넘긴다.</p>
+<h3 id="비유"><a href="#비유" class="headerlink" title="비유"></a>비유</h3><p>간단하게 설명하면 <code>동기</code>는 카페에서 손님에게 주문을 받고 커피를 만들어서 전달하고 다음 손님으로 넘어가는 것 이고 <code>비동기</code>는 카페에서 손님에게 주문을 받고 진동벨을 준 다음 다음 손님의 주문으로 넘어가고, 손님의 커피가 제조가 완료되면 진동벨(callback)을 울려 해당 손님에게 전달한다. </p>
+<h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><p>동기 코드<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'1'</span>);</span><br><span class="line"><span class="keyword">const</span> data = fs.readFileSync(<span class="string">'/file.md'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(data);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'2'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1 </span></span><br><span class="line"><span class="comment">// data..</span></span><br><span class="line"><span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p>
+<p>비동기 코드<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'1'</span>);</span><br><span class="line">fs.readFile(<span class="string">'/file.md'</span>, (err, data) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'2'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'3'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1</span></span><br><span class="line"><span class="comment">// 3</span></span><br><span class="line"><span class="comment">// data..</span></span><br><span class="line"><span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p>
+<p>동기 코드는 우리가 생각하는 순서대로 결과가 나온다.<br>비동기 코드는 우리의 생각과 다르게 <code>fs.readFile</code>를 처리하는 동안 다음으로 넘어가서 <code>3</code>이 출력되고 함수가 다 처리되면 callback함수의 처리가 이루어진다.</p>
+<h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><p><a href="https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback" target="_blank" rel="noopener">node</a></p>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>
         </div>
+        <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/17/Javascript-Linked-List/" title="[자료구조][자바스크립트] 연결리스트(linked list)" rel="bookmark">[자료구조][자바스크립트] 연결리스트(linked list)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/16/Javascript-Queue/" title="[자료구조][자바스크립트] 큐(Queue)" rel="bookmark">[자료구조][자바스크립트] 큐(Queue)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/16/Javascript-Stack/" title="[자료구조][자바스크립트] 스택(Stack)" rel="bookmark">[자료구조][자바스크립트] 스택(Stack)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/19/Process-VS-Thread/" title="프로세스(Process) vs 쓰레드(Thread)" rel="bookmark">프로세스(Process) vs 쓰레드(Thread)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/18/Queue-Using-Stacks/" title="[자료구조][자바스크립트] 스택으로 큐 구현 javascript" rel="bookmark">[자료구조][자바스크립트] 스택으로 큐 구현 javascript</a></h3></div></li></ul>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://qweqwe9ab.github.io/2019/01/19/Sync-VS-Async/" data-id="cjr389f3h0010mq39vpmcs1l6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "밤에 하는 개발"
+        },
+        "headline": "동기와 비동기",
+        "image": "http://qweqwe9ab.github.io/images/logo-header.png",
+        "keywords": "dev javascript etc interview nodejs",
+        "genre": "Dev Javascript",
+        "datePublished": "2019-01-19",
+        "dateCreated": "2019-01-19",
+        "dateModified": "2019-01-19",
+        "url": "http://qweqwe9ab.github.io/2019/01/19/Sync-VS-Async/",
+        "description": "설명동기여러작업을 진행 할때 하나의 작업이 끝날때 까지 기다렸다가 다음 작업을 진행하는 것. 
+비동기여러작업을 진행 할때 하나의 작업을 실행하고 다음 작업으로 넘어간다.이전에 실행한 작업은 작업이 끝나고 callback을 넘긴다.
+비유간단하게 설명하면 동기는 카페에서 손님에게 주문을 받고 커피를 만들어서 전달하고 다음 손님으로 넘어가는 것 이고 비동기는 카"
+        "wordCount": 219
+    }
+</script>
+
+</article>
+
+    <section id="comments">
     
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
-
-    </div></section>
+    
+    </section>
 
 
 
@@ -281,6 +365,19 @@ Client와 Server가 메세지를 주고 받는 통신 규약
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/01/19/Process-VS-Thread/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">프로세스(Process) vs 쓰레드(Thread)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -489,11 +586,13 @@ Client와 Server가 메세지를 주고 받는 통신 규약
     var disqus_shortname = 'qweqwe9ab';
     
     
+    var disqus_url = 'http://qweqwe9ab.github.io/2019/01/19/Sync-VS-Async/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

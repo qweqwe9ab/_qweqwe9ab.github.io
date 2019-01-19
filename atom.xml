@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qweqwe9ab.github.io/"/>
-  <updated>2019-01-18T08:41:48.874Z</updated>
+  <updated>2019-01-19T09:13:02.893Z</updated>
   <id>http://qweqwe9ab.github.io/</id>
   
   <author>
@@ -15,6 +15,76 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>동기와 비동기</title>
+    <link href="http://qweqwe9ab.github.io/2019/01/19/Sync-VS-Async/"/>
+    <id>http://qweqwe9ab.github.io/2019/01/19/Sync-VS-Async/</id>
+    <published>2019-01-19T08:42:36.000Z</published>
+    <updated>2019-01-19T09:13:02.893Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h2><h3 id="동기"><a href="#동기" class="headerlink" title="동기"></a>동기</h3><p>여러작업을 진행 할때 하나의 작업이 끝날때 까지 기다렸다가 다음 작업을 진행하는 것. </p><h3 id="비동기"><a href="#비동기" class="headerlink" title="비동기"></a>비동기</h3><p>여러작업을 진행 할때 하나의 작업을 실행하고 다음 작업으로 넘어간다.<br>이전에 실행한 작업은 작업이 끝나고 <code>callback</code>을 넘긴다.</p><h3 id="비유"><a href="#비유" class="headerlink" title="비유"></a>비유</h3><p>간단하게 설명하면 <code>동기</code>는 카페에서 손님에게 주문을 받고 커피를 만들어서 전달하고 다음 손님으로 넘어가는 것 이고 <code>비동기</code>는 카페에서 손님에게 주문을 받고 진동벨을 준 다음 다음 손님의 주문으로 넘어가고, 손님의 커피가 제조가 완료되면 진동벨(callback)을 울려 해당 손님에게 전달한다. </p><h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><p>동기 코드<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'1'</span>);</span><br><span class="line"><span class="keyword">const</span> data = fs.readFileSync(<span class="string">'/file.md'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(data);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'2'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1 </span></span><br><span class="line"><span class="comment">// data..</span></span><br><span class="line"><span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p><p>비동기 코드<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'1'</span>);</span><br><span class="line">fs.readFile(<span class="string">'/file.md'</span>, (err, data) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'2'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'3'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1</span></span><br><span class="line"><span class="comment">// 3</span></span><br><span class="line"><span class="comment">// data..</span></span><br><span class="line"><span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p><p>동기 코드는 우리가 생각하는 순서대로 결과가 나온다.<br>비동기 코드는 우리의 생각과 다르게 <code>fs.readFile</code>를 처리하는 동안 다음으로 넘어가서 <code>3</code>이 출력되고 함수가 다 처리되면 callback함수의 처리가 이루어진다.</p><h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><p><a href="https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback" target="_blank" rel="noopener">node</a></p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;설명&quot;&gt;&lt;a href=&quot;#설명&quot; class=&quot;headerlink&quot; title=&quot;설명&quot;&gt;&lt;/a&gt;설명&lt;/h2&gt;&lt;h3 id=&quot;동기&quot;&gt;&lt;a href=&quot;#동기&quot; class=&quot;headerlink&quot; title=&quot;동기&quot;&gt;&lt;/a&gt;동기&lt;/h3&gt;&lt;p&gt;여러작
+      
+    
+    </summary>
+    
+      <category term="Dev" scheme="http://qweqwe9ab.github.io/categories/Dev/"/>
+    
+      <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
+    
+    
+      <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
+    
+      <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
+      <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
+    
+      <category term="nodejs" scheme="http://qweqwe9ab.github.io/tags/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>프로세스(Process) vs 쓰레드(Thread)</title>
+    <link href="http://qweqwe9ab.github.io/2019/01/19/Process-VS-Thread/"/>
+    <id>http://qweqwe9ab.github.io/2019/01/19/Process-VS-Thread/</id>
+    <published>2019-01-19T08:09:10.000Z</published>
+    <updated>2019-01-19T08:37:43.094Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="프로세스"><a href="#프로세스" class="headerlink" title="프로세스"></a>프로세스</h2><ul><li>프로세스는 실행중인 프로그램이다.</li><li>디스크로에서 메모리로 적재되어 CPU의 할당을 받을 수 있다.</li></ul><h2 id="쓰레드"><a href="#쓰레드" class="headerlink" title="쓰레드"></a>쓰레드</h2><ul><li>프로세스의 실행단위</li><li>한 프로세스 내에서 동작되는 여러 실행으로 프로세스내의 주소공간이나 자원을 공유한다.</li></ul><h3 id="멀티-쓰레드"><a href="#멀티-쓰레드" class="headerlink" title="멀티 쓰레드"></a>멀티 쓰레드</h3><ul><li>메모리 공간과 시스템 자원 소모가 줄어들게 된다.</li><li>쓰레드 간의 공유된 자원을 사용해 쓰레드간의 통신이 간단하고 빠르다</li></ul><h3 id="멀티-쓰레드-문제점"><a href="#멀티-쓰레드-문제점" class="headerlink" title="멀티 쓰레드 문제점"></a>멀티 쓰레드 문제점</h3><ul><li>자원을 공유하기 때문에 신경을 써야한다.</li><li>동기화 작업으로 인해 성능이 저하될 수 있다.</li></ul><h3 id="요약"><a href="#요약" class="headerlink" title="요약"></a>요약</h3><p><code>프로세스</code>는 운영체제로 부터 자원을 할당받는 자원단위(실행중인 프로그램)<br><code>쓰레드</code>는 프로세스가 할당 받은 자원을 이용하는 실행 단위()</p><p><code>멀티 쓰레드</code>는 적은 메모리 사용과 빠르지만 자원을 공유해 신경쓸 것이 많다. <code>멀트 프로세스</code>는 자원을 많이 사용하지만 공유된 자원이 없어 신경쓸 것이 적다.</p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;프로세스&quot;&gt;&lt;a href=&quot;#프로세스&quot; class=&quot;headerlink&quot; title=&quot;프로세스&quot;&gt;&lt;/a&gt;프로세스&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;프로세스는 실행중인 프로그램이다.&lt;/li&gt;
+&lt;li&gt;디스크로에서 메모리로 적재되어 CPU의 할당을 받을
+      
+    
+    </summary>
+    
+      <category term="Dev" scheme="http://qweqwe9ab.github.io/categories/Dev/"/>
+    
+      <category term="Etc" scheme="http://qweqwe9ab.github.io/categories/Dev/Etc/"/>
+    
+    
+      <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
+    
+      <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
+      <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
+    
+  </entry>
   
   <entry>
     <title>[자료구조][자바스크립트] 스택으로 큐 구현 javascript</title>
@@ -39,11 +109,11 @@
       <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
     
     
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
-    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="datastructure" scheme="http://qweqwe9ab.github.io/tags/datastructure/"/>
     
@@ -78,11 +148,11 @@
       <category term="Codewars" scheme="http://qweqwe9ab.github.io/categories/Dev/Codewars/"/>
     
     
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
-    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="codingtest" scheme="http://qweqwe9ab.github.io/tags/codingtest/"/>
     
@@ -111,11 +181,11 @@
       <category term="Codewars" scheme="http://qweqwe9ab.github.io/categories/Dev/Codewars/"/>
     
     
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
-    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="codingtest" scheme="http://qweqwe9ab.github.io/tags/codingtest/"/>
     
@@ -145,11 +215,11 @@
       <category term="Codewars" scheme="http://qweqwe9ab.github.io/categories/Dev/Codewars/"/>
     
     
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
-    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="codingtest" scheme="http://qweqwe9ab.github.io/tags/codingtest/"/>
     
@@ -178,11 +248,11 @@
       <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
     
     
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
-    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="datastructure" scheme="http://qweqwe9ab.github.io/tags/datastructure/"/>
     
@@ -216,9 +286,9 @@
       <category term="Etc" scheme="http://qweqwe9ab.github.io/categories/Dev/Etc/"/>
     
     
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
-    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
     
@@ -251,9 +321,9 @@
       <category term="Etc" scheme="http://qweqwe9ab.github.io/categories/Dev/Etc/"/>
     
     
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
-    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
     
@@ -288,11 +358,11 @@
       <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
     
     
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
-    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="datastructure" scheme="http://qweqwe9ab.github.io/tags/datastructure/"/>
     
@@ -325,11 +395,11 @@
       <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
     
     
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
-    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="datastructure" scheme="http://qweqwe9ab.github.io/tags/datastructure/"/>
     
@@ -377,7 +447,7 @@
     <link href="http://qweqwe9ab.github.io/2019/01/14/improve-nested-conditionals/"/>
     <id>http://qweqwe9ab.github.io/2019/01/14/improve-nested-conditionals/</id>
     <published>2019-01-14T09:04:48.000Z</published>
-    <updated>2019-01-17T11:07:23.704Z</updated>
+    <updated>2019-01-18T10:14:29.573Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/jstips-animation.gif" alt=""></p><h2 id="중첩된-조건문-개선"><a href="#중첩된-조건문-개선" class="headerlink" title="중첩된 조건문 개선"></a>중첩된 조건문 개선</h2><hr><p><a href="http://www.jstips.co/" target="_blank" rel="noopener">jstips</a>에서 <a href="http://www.jstips.co/en/javascript/improve-nested-conditionals/" target="_blank" rel="noopener">javascript를 사용할 때 중첩된 <strong>if</strong>문을 조금 더 깔끔하고 효율적으로 만들 수 있을지</a>에 대해서 읽었습니다.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">if</span> (color) &#123;</span><br><span class="line">  <span class="keyword">if</span> (color === <span class="string">'black'</span>) &#123;</span><br><span class="line">    printBlackBackground();</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (color === <span class="string">'red'</span>) &#123;</span><br><span class="line">    printRedBackground();</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (color === <span class="string">'blue'</span>) &#123;</span><br><span class="line">    printBlueBackground();</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (color === <span class="string">'green'</span>) &#123;</span><br><span class="line">    printGreenBackground();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    printYellowBackground();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>우선 중첩된 <strong>if</strong>문을 개선하는 방법 중에 하나는 <strong>switch</strong>문을 사용하는 것입니다.<br><strong>switch</strong>문을 사용하면 더 짧고 깔끔하게 만들 수 잇지만 <strong>break;</strong>를 생략하는 것과 같은 오류를 디버깅하기에 어렵기 때문에 사용하지 않는 것이 좋습니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span>(color) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="string">'black'</span>:</span><br><span class="line">    printBlackBackground();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="string">'red'</span>:</span><br><span class="line">    printRedBackground();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="string">'blue'</span>:</span><br><span class="line">    printBlueBackground();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="string">'green'</span>:</span><br><span class="line">    printGreenBackground();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">default</span>:</span><br><span class="line">    printYellowBackground();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>조건문에 여러 가지 조건이 들어가는 경우에도 조건문을 짧고 깔끔하게 쓰고 싶다면 switch를 사용할 수 있습니다.<br>이 경우에는 <strong>switch</strong>문의 파라미터로 <strong>true</strong>를 넣고, <strong>case</strong>에 아래처럼 조건을 넣으면 가능합니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">switch</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="keyword">case</span> (<span class="keyword">typeof</span> color === <span class="string">'string'</span> &amp;&amp; color === <span class="string">'black'</span>):</span><br><span class="line">    printBlackBackground();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> (<span class="keyword">typeof</span> color === <span class="string">'string'</span> &amp;&amp; color === <span class="string">'red'</span>):</span><br><span class="line">    printRedBackground();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> (<span class="keyword">typeof</span> color === <span class="string">'string'</span> &amp;&amp; color === <span class="string">'blue'</span>):</span><br><span class="line">    printBlueBackground();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> (<span class="keyword">typeof</span> color === <span class="string">'string'</span> &amp;&amp; color === <span class="string">'green'</span>):</span><br><span class="line">    printGreenBackground();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> (<span class="keyword">typeof</span> color === <span class="string">'string'</span> &amp;&amp; color === <span class="string">'yellow'</span>):</span><br><span class="line">    printYellowBackground();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>리팩토링 같은 걸 생각할 필요가 없다면, 각 색의 함수를 만드는 것 대신에 색을 인수로 갖는 함수를 만들어서 해결할 수도 있습니다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printBackground</span>(<span class="params">color</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!color || <span class="keyword">typeof</span> color !== <span class="string">'string'</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span>; <span class="comment">// Invalid color, return immediately</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>그러나 만약 리팩토링도 생각해야 한다면, 여러번 조건을 확인하고 <strong>swtich</strong>문을 사용하는 것을 피해야 합니다. </p><h3 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h3><hr><p>중첩된 <strong>if</strong>문을 개선하는 가장 효율 적인 방법은 object를 사용하는 방법입니다.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> colorObj = &#123;</span><br><span class="line">  <span class="string">'black'</span>: printBlackBackground,</span><br><span class="line">  <span class="string">'red'</span>: printRedBackground,</span><br><span class="line">  <span class="string">'blue'</span>: printBlueBackground,</span><br><span class="line">  <span class="string">'green'</span>: printGreenBackground,</span><br><span class="line">  <span class="string">'yellow'</span>: printYellowBackground</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (color <span class="keyword">in</span> colorObj) &#123;</span><br><span class="line">  colorObj[color]();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
     

@@ -8,6 +8,30 @@
     </url>
 
     <url>
+        <loc>http://qweqwe9ab.github.io/2019/01/19/Sync-VS-Async/</loc>
+        <lastmod>2019-01-19T09:13:02.893Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://qweqwe9ab.github.io/2019/01/19/Process-VS-Thread/</loc>
+        <lastmod>2019-01-19T08:37:43.094Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://qweqwe9ab.github.io/2019/01/14/improve-nested-conditionals/</loc>
+        <lastmod>2019-01-18T10:14:29.573Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://qweqwe9ab.github.io/2019/01/18/Queue-Using-Stacks/</loc>
         <lastmod>2019-01-18T08:41:48.874Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -74,14 +98,6 @@
     <url>
         <loc>http://qweqwe9ab.github.io/2019/01/14/insert-item-inside-an-array/</loc>
         <lastmod>2019-01-17T11:07:27.101Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://qweqwe9ab.github.io/2019/01/14/improve-nested-conditionals/</loc>
-        <lastmod>2019-01-17T11:07:23.704Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
