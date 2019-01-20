@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qweqwe9ab.github.io/"/>
-  <updated>2019-01-19T09:13:02.893Z</updated>
+  <updated>2019-01-20T10:56:03.651Z</updated>
   <id>http://qweqwe9ab.github.io/</id>
   
   <author>
@@ -17,11 +17,83 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[javascript] 하노이 탑 (Hanoi Tower)</title>
+    <link href="http://qweqwe9ab.github.io/2019/01/20/Hanoi/"/>
+    <id>http://qweqwe9ab.github.io/2019/01/20/Hanoi/</id>
+    <published>2019-01-20T09:29:32.000Z</published>
+    <updated>2019-01-20T10:56:03.651Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="하노이-탑"><a href="#하노이-탑" class="headerlink" title="하노이 탑"></a>하노이 탑</h2><p>하노이 탑은 다음과 같은 조건을 가지고 있다.</p><ul><li>한번에 하나의 원판만 이동</li><li>맨위에 있는 원판만 이동 가능</li><li>작은 원판 위에 큰 원판을 올리는 것은 불가능</li><li>중간의 막대는 임시적으로 이용 가능</li></ul><img src="/2019/01/20/Hanoi/hanoi.jpg"><p><code>n-1</code>개를 A에서 B로 이동하고,<br><code>n</code>개를 A에서 C로 이동한다.<br>그리고 <code>n-1</code>개를 B에서 C로 이동한다.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> hanoi = <span class="function">(<span class="params">n, <span class="keyword">from</span>, temp, to</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(n===<span class="number">1</span>) <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;n&#125;</span>을 <span class="subst">$&#123;<span class="keyword">from</span>&#125;</span>에서 <span class="subst">$&#123;to&#125;</span>로 이동`</span>);</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        hanoi(n<span class="number">-1</span>, <span class="keyword">from</span>, to, temp);</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;n&#125;</span>을 <span class="subst">$&#123;<span class="keyword">from</span>&#125;</span>에서 <span class="subst">$&#123;to&#125;</span>로 이동`</span>);</span><br><span class="line">        hanoi(n<span class="number">-1</span>, temp, <span class="keyword">from</span>, to);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hanoi(<span class="number">5</span>, <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">1을 A에서 C로 이동</span><br><span class="line">2을 A에서 B로 이동</span><br><span class="line">1을 C에서 B로 이동</span><br><span class="line">3을 A에서 C로 이동</span><br><span class="line">1을 B에서 A로 이동</span><br><span class="line">2을 B에서 C로 이동</span><br><span class="line">1을 A에서 C로 이동</span><br><span class="line">4을 A에서 B로 이동</span><br><span class="line">1을 C에서 B로 이동</span><br><span class="line">2을 C에서 A로 이동</span><br><span class="line">1을 B에서 A로 이동</span><br><span class="line">3을 C에서 B로 이동</span><br><span class="line">1을 A에서 C로 이동</span><br><span class="line">2을 A에서 B로 이동</span><br><span class="line">1을 C에서 B로 이동</span><br><span class="line">5을 A에서 C로 이동</span><br><span class="line">1을 B에서 A로 이동</span><br><span class="line">2을 B에서 C로 이동</span><br><span class="line">1을 A에서 C로 이동</span><br><span class="line">3을 B에서 A로 이동</span><br><span class="line">1을 C에서 B로 이동</span><br><span class="line">2을 C에서 A로 이동</span><br><span class="line">1을 B에서 A로 이동</span><br><span class="line">4을 B에서 C로 이동</span><br><span class="line">1을 A에서 C로 이동</span><br><span class="line">2을 A에서 B로 이동</span><br><span class="line">1을 C에서 B로 이동</span><br><span class="line">3을 A에서 C로 이동</span><br><span class="line">1을 B에서 A로 이동</span><br><span class="line">2을 B에서 C로 이동</span><br><span class="line">1을 A에서 C로 이동</span><br></pre></td></tr></table></figure><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;하노이-탑&quot;&gt;&lt;a href=&quot;#하노이-탑&quot; class=&quot;headerlink&quot; title=&quot;하노이 탑&quot;&gt;&lt;/a&gt;하노이 탑&lt;/h2&gt;&lt;p&gt;하노이 탑은 다음과 같은 조건을 가지고 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;한번에 하나의 원판만 이동&lt;/li&gt;
+      
+    
+    </summary>
+    
+      <category term="Dev" scheme="http://qweqwe9ab.github.io/categories/Dev/"/>
+    
+      <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
+    
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
+      <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
+    
+      <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
+    
+      <category term="fibonacci" scheme="http://qweqwe9ab.github.io/tags/fibonacci/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[javascript] 피보나치 (Fibonacci)</title>
+    <link href="http://qweqwe9ab.github.io/2019/01/20/Fibonacci/"/>
+    <id>http://qweqwe9ab.github.io/2019/01/20/Fibonacci/</id>
+    <published>2019-01-20T08:53:44.000Z</published>
+    <updated>2019-01-20T09:07:56.943Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="피보나치-수열"><a href="#피보나치-수열" class="headerlink" title="피보나치 수열"></a>피보나치 수열</h2><p><code>0, 1, 1, 2, 3, 5, 8, 13, 21....</code><br>피보나치는 0번째는 0, 첫 번째는 1 그 이후로는 이전 두개의 수를 더한 값을 갖는 수열이다.</p><p>F(0) = 0, F(1) = 1, F(n) = F(n-2) + F(n-1)</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fib = <span class="function">(<span class="params">num</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(num &lt;= <span class="number">1</span>) <span class="keyword">return</span> num;</span><br><span class="line">    <span class="keyword">return</span> fib(num<span class="number">-1</span>) + fib(num<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">1</span>))</span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">2</span>))</span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">3</span>))</span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">4</span>))</span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">5</span>))</span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">6</span>))</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">5</span><br><span class="line">8</span><br></pre></td></tr></table></figure><p>재귀함수로 구현하면 간단하지만, 같은 계산을 여러번 진행하기 때문에 좋지는 않다.</p><p>그래서 반복문으로 변경할 수 있다.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fib = <span class="function">(<span class="params">num</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(num &lt;= <span class="number">1</span>) <span class="keyword">return</span> num;</span><br><span class="line">    <span class="keyword">let</span> current = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> last = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">2</span>; i &lt;= num; i++) &#123;</span><br><span class="line">           <span class="keyword">let</span> tmp = current;</span><br><span class="line">           current = current + last;</span><br><span class="line">           last = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> current;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">1</span>))</span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">2</span>))</span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">3</span>))</span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">4</span>))</span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">5</span>))</span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">6</span>))</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">5</span><br><span class="line">8</span><br></pre></td></tr></table></figure><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;피보나치-수열&quot;&gt;&lt;a href=&quot;#피보나치-수열&quot; class=&quot;headerlink&quot; title=&quot;피보나치 수열&quot;&gt;&lt;/a&gt;피보나치 수열&lt;/h2&gt;&lt;p&gt;&lt;code&gt;0, 1, 1, 2, 3, 5, 8, 13, 21....&lt;/code&gt;&lt;br&gt;피보
+      
+    
+    </summary>
+    
+      <category term="Dev" scheme="http://qweqwe9ab.github.io/categories/Dev/"/>
+    
+      <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
+    
+    
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
+      <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
+    
+      <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
+    
+      <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
+    
+      <category term="fibonacci" scheme="http://qweqwe9ab.github.io/tags/fibonacci/"/>
+    
+  </entry>
+  
+  <entry>
     <title>동기와 비동기</title>
     <link href="http://qweqwe9ab.github.io/2019/01/19/Sync-VS-Async/"/>
     <id>http://qweqwe9ab.github.io/2019/01/19/Sync-VS-Async/</id>
     <published>2019-01-19T08:42:36.000Z</published>
-    <updated>2019-01-19T09:13:02.893Z</updated>
+    <updated>2019-01-19T09:14:58.815Z</updated>
     
     <content type="html"><![CDATA[<h2 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h2><h3 id="동기"><a href="#동기" class="headerlink" title="동기"></a>동기</h3><p>여러작업을 진행 할때 하나의 작업이 끝날때 까지 기다렸다가 다음 작업을 진행하는 것. </p><h3 id="비동기"><a href="#비동기" class="headerlink" title="비동기"></a>비동기</h3><p>여러작업을 진행 할때 하나의 작업을 실행하고 다음 작업으로 넘어간다.<br>이전에 실행한 작업은 작업이 끝나고 <code>callback</code>을 넘긴다.</p><h3 id="비유"><a href="#비유" class="headerlink" title="비유"></a>비유</h3><p>간단하게 설명하면 <code>동기</code>는 카페에서 손님에게 주문을 받고 커피를 만들어서 전달하고 다음 손님으로 넘어가는 것 이고 <code>비동기</code>는 카페에서 손님에게 주문을 받고 진동벨을 준 다음 다음 손님의 주문으로 넘어가고, 손님의 커피가 제조가 완료되면 진동벨(callback)을 울려 해당 손님에게 전달한다. </p><h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><p>동기 코드<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'1'</span>);</span><br><span class="line"><span class="keyword">const</span> data = fs.readFileSync(<span class="string">'/file.md'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(data);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'2'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1 </span></span><br><span class="line"><span class="comment">// data..</span></span><br><span class="line"><span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p><p>비동기 코드<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'1'</span>);</span><br><span class="line">fs.readFile(<span class="string">'/file.md'</span>, (err, data) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'2'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'3'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1</span></span><br><span class="line"><span class="comment">// 3</span></span><br><span class="line"><span class="comment">// data..</span></span><br><span class="line"><span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p><p>동기 코드는 우리가 생각하는 순서대로 결과가 나온다.<br>비동기 코드는 우리의 생각과 다르게 <code>fs.readFile</code>를 처리하는 동안 다음으로 넘어가서 <code>3</code>이 출력되고 함수가 다 처리되면 callback함수의 처리가 이루어진다.</p><h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><p><a href="https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback" target="_blank" rel="noopener">node</a></p><h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3>]]></content>
     
@@ -39,11 +111,11 @@
       <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
     
     
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
-    
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
     
@@ -76,11 +148,11 @@
       <category term="Etc" scheme="http://qweqwe9ab.github.io/categories/Dev/Etc/"/>
     
     
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
-    
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
     
@@ -109,11 +181,11 @@
       <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
     
     
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
-    
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="datastructure" scheme="http://qweqwe9ab.github.io/tags/datastructure/"/>
     
@@ -148,11 +220,11 @@
       <category term="Codewars" scheme="http://qweqwe9ab.github.io/categories/Dev/Codewars/"/>
     
     
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
-    
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="codingtest" scheme="http://qweqwe9ab.github.io/tags/codingtest/"/>
     
@@ -181,11 +253,11 @@
       <category term="Codewars" scheme="http://qweqwe9ab.github.io/categories/Dev/Codewars/"/>
     
     
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
-    
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="codingtest" scheme="http://qweqwe9ab.github.io/tags/codingtest/"/>
     
@@ -215,11 +287,11 @@
       <category term="Codewars" scheme="http://qweqwe9ab.github.io/categories/Dev/Codewars/"/>
     
     
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
-    
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="codingtest" scheme="http://qweqwe9ab.github.io/tags/codingtest/"/>
     
@@ -248,11 +320,11 @@
       <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
     
     
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
-    
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="datastructure" scheme="http://qweqwe9ab.github.io/tags/datastructure/"/>
     
@@ -286,9 +358,9 @@
       <category term="Etc" scheme="http://qweqwe9ab.github.io/categories/Dev/Etc/"/>
     
     
-      <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
-    
       <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
+      <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
     
@@ -321,9 +393,9 @@
       <category term="Etc" scheme="http://qweqwe9ab.github.io/categories/Dev/Etc/"/>
     
     
-      <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
-    
       <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
+      <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="interview" scheme="http://qweqwe9ab.github.io/tags/interview/"/>
     
@@ -358,11 +430,11 @@
       <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
     
     
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
-    
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="datastructure" scheme="http://qweqwe9ab.github.io/tags/datastructure/"/>
     
@@ -395,11 +467,11 @@
       <category term="Javascript" scheme="http://qweqwe9ab.github.io/categories/Dev/Javascript/"/>
     
     
+      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
+    
       <category term="dev" scheme="http://qweqwe9ab.github.io/tags/dev/"/>
     
       <category term="javascript" scheme="http://qweqwe9ab.github.io/tags/javascript/"/>
-    
-      <category term="etc" scheme="http://qweqwe9ab.github.io/tags/etc/"/>
     
       <category term="datastructure" scheme="http://qweqwe9ab.github.io/tags/datastructure/"/>
     
